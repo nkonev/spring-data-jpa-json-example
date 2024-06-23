@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: "myApp"
+  datasource:
+    # https://jdbc.postgresql.org/documentation/head/connect.html#connection-parameters
+    url: jdbc:postgresql://127.0.0.1:34432/hibernate_json?connectTimeout=10&socketTimeout=40&ApplicationName=my-app
+    username: hibernate_json
+    password: "PazZw0rd"
+  liquibase:
+    change-log: classpath:/db/changelog.yml
+  jpa:
+    open-in-view: false
