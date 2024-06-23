@@ -10,10 +10,10 @@ import java.util.Objects;
 @Entity
 @SequenceGenerator(
     name = "seqid-gen",
-    sequenceName = "book_record_id_seq",
+    sequenceName = "book_id_seq",
     initialValue = 1,
     allocationSize = 1)
-public class BookRecord {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqid-gen")
     Long id;
@@ -26,7 +26,7 @@ public class BookRecord {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        BookRecord that = (BookRecord) o;
+        Book that = (Book) o;
         return Objects.equals(id, that.id) && Objects.equals(title, that.title) && Objects.equals(author, that.author) && Objects.equals(jsonbContent, that.jsonbContent);
     }
 

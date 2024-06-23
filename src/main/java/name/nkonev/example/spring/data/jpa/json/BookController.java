@@ -18,22 +18,22 @@ record BookController(
 ) {
 
     @PostExchange
-    public BookRecord post(@RequestBody BookRecord book) {
+    public Book post(@RequestBody Book book) {
         return bookRepository.save(book);
     }
 
     @PutExchange
-    public BookRecord put(@RequestBody BookRecord book) {
+    public Book put(@RequestBody Book book) {
         return bookRepository.save(book);
     }
 
     @PutExchange("/{id}")
-    public Optional<BookRecord> get(@PathVariable Long id) {
+    public Optional<Book> get(@PathVariable Long id) {
         return bookRepository.findById(id);
     }
 
     @GetExchange("/all")
-    public Collection<BookRecord> getAll() {
+    public Collection<Book> getAll() {
         return bookRepository.findAll();
     }
 }
