@@ -34,7 +34,7 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency>
-        <!-- to remove DATABASECHANGELOGLOCK table -->
+        <!-- to remove DATABASECHANGELOGLOCK table - to use postgres advisory locks instead -->
         <dependency>
             <groupId>com.github.blagerweij</groupId>
             <artifactId>liquibase-sessionlock</artifactId>
@@ -58,6 +58,7 @@
                     <!-- for dummy IntelliJ -->
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <!-- To have ability not to write names explicitly, e. g. in @PathVariable -->
                     <parameters>true</parameters>
                 </configuration>
             </plugin>
