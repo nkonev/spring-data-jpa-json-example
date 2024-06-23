@@ -16,11 +16,11 @@ import java.util.Objects;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqid-gen")
-    Long id;
-    String title;
-    String author;
+    private Long id;
+    private String title;
+    private String author;
     @JdbcTypeCode(SqlTypes.JSON)
-    BookAttributes jsonbContent;
+    private BookAttributes jsonbContent;
 
     @Override
     public boolean equals(Object o) {
